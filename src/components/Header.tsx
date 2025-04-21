@@ -1,39 +1,33 @@
-import { PhoneCall } from "lucide-react";
+import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
+  const handlePhoneCall = () => {
+    window.location.href = "tel:+79500308830";
+  };
+
   return (
-    <header className="border-b border-b-secondary/30 py-4 px-4 bg-black/50 backdrop-blur-sm">
-      <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
-        <div className="flex items-center gap-2 mb-4 sm:mb-0">
-          <div className="h-10 w-10 relative">
-            <div className="absolute inset-0 rounded-full bg-electric-blue/20 animate-glow"></div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-2xl">⚡</span>
-            </div>
+    <header className="bg-black/80 backdrop-blur-sm sticky top-0 z-50 border-b border-electric-blue/20">
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div className="flex items-center gap-2">
+          <div className="w-10 h-10 bg-electric-blue rounded-full flex items-center justify-center neon-border animate-glow">
+            <span className="text-xl font-bold text-white">⚡</span>
           </div>
-          <h1 className="text-xl sm:text-2xl font-bold neon-text text-white">
-            Электрик Колпино
-          </h1>
+          <div>
+            <h1 className="text-xl font-bold neon-text">
+              Электрик Колпино
+            </h1>
+          </div>
         </div>
         
-        <div className="flex items-center gap-4">
-          <Button 
-            variant="outline" 
-            className="neon-border text-white hover:bg-electric-blue/20"
-            onClick={() => window.location.href = 'tel:+79500308830'}
-          >
-            <PhoneCall className="h-4 w-4 mr-2" />
-            +7 950 030 88 30
-          </Button>
-          <Button 
-            variant="default" 
-            className="bg-electric-blue/80 hover:bg-electric-blue text-white"
-            onClick={() => window.open('https://t.me/elektrikkolpino', '_blank')}
-          >
-            Telegram
-          </Button>
-        </div>
+        <Button 
+          variant="ghost" 
+          className="text-white hover:text-electric-blue hover:bg-transparent"
+          onClick={handlePhoneCall}
+        >
+          <Phone className="mr-2 h-4 w-4 text-electric-blue" />
+          +7 950 030 88 30
+        </Button>
       </div>
     </header>
   );

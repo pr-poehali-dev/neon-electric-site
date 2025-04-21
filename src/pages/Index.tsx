@@ -14,7 +14,7 @@ import {
   Clock, 
   Phone,
   Send,
-  Youtube
+  Youtube as YoutubeIcon
 } from "lucide-react";
 
 const Index = () => {
@@ -189,7 +189,7 @@ const Index = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-red-600/20 hover:bg-red-600/30 transition-colors"
                 >
-                  <Youtube className="h-5 w-5 text-red-500" />
+                  <YoutubeIcon className="h-5 w-5 text-red-500" />
                   <span className="text-white">Подписаться на канал</span>
                 </a>
               </div>
