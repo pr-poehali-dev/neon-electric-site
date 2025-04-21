@@ -13,7 +13,8 @@ import {
   ShieldCheck, 
   Clock, 
   Phone,
-  Send
+  Send,
+  Youtube
 } from "lucide-react";
 
 const Index = () => {
