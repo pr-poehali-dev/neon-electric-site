@@ -20,6 +20,14 @@ import {
 const Index = () => {
   const [activeTab, setActiveTab] = useState("services");
   
+  const handlePhoneCall = () => {
+    window.location.href = 'tel:+79500308830';
+  };
+  
+  const handleTelegramOpen = () => {
+    window.open('https://t.me/elektrikkolpino', '_blank');
+  };
+  
   const services = [
     {
       title: "Ремонт электропроводки",
@@ -75,7 +83,7 @@ const Index = () => {
               <Button 
                 size="lg" 
                 className="bg-electric-blue hover:bg-electric-blue/80 text-white"
-                onClick={() => window.location.href = 'tel:+79500308830'}
+                onClick={handlePhoneCall}
               >
                 <Phone className="mr-2 h-5 w-5" />
                 +7 950 030 88 30
@@ -84,7 +92,7 @@ const Index = () => {
                 size="lg" 
                 variant="outline" 
                 className="border-electric-blue text-white hover:bg-electric-blue/20"
-                onClick={() => window.open('https://t.me/elektrikkolpino', '_blank')}
+                onClick={handleTelegramOpen}
               >
                 <Send className="mr-2 h-5 w-5" />
                 Написать в Telegram
@@ -201,7 +209,7 @@ const Index = () => {
               <Button 
                 size="lg" 
                 className="bg-electric-blue hover:bg-electric-blue/80 text-white"
-                onClick={() => window.location.href = 'tel:+79500308830'}
+                onClick={handlePhoneCall}
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Позвонить сейчас
@@ -210,7 +218,7 @@ const Index = () => {
                 size="lg" 
                 variant="outline" 
                 className="border-electric-blue text-white hover:bg-electric-blue/20"
-                onClick={() => window.open('https://t.me/elektrikkolpino', '_blank')}
+                onClick={handleTelegramOpen}
               >
                 <Send className="mr-2 h-5 w-5" />
                 Написать в Telegram
